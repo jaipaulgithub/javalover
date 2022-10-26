@@ -1,0 +1,412 @@
+Write an Employee class with any 3 properties and create 2 employee objects to store and display the data.
+   Prompt the user for the 2 employees to be input from the terminal.
+
+   Sample Input:
+   Enter the Empid: 01
+   Enter the Name: Sree
+   Enter Salary: 1000
+   Enter the Empid: 02
+   Enter the Name: Balaji
+   Enter Salary: 2000
+
+   Expected Output:
+   **** Stored data displayed below ****
+   Employee id = 01
+   Employee name = Sree
+   Employee salary = 1000
+   Employee id = 02
+   Employee name = Balaji
+   Employee salary = 2000
+
+*/
+
+import java.util.Scanner;
+
+public class Employee {
+
+//Declare the variables
+  int id,id1;
+  String name, name1;
+  long salary, salary1;
+  Scanner s2;
+public Employee(Scanner s1){
+  s2=s1;
+}
+//Create a method getInput() 
+
+    
+public  void getInput(){
+
+//create Scanner object
+System.out.print("Enter the Empid:");
+  id=s2.nextInt();
+  System.out.print("Enter the Name:");
+  name=s2.next();
+  System.out.print("Enter Salary:");
+  salary=s2.nextLong();
+  System.out.print("Enter the Empid:");
+  id1=s2.nextInt();
+  System.out.print("Enter the Name:");
+  name1=s2.next();
+  System.out.print("Enter Salary:");
+  salary1=s2.nextLong();
+//take input from user
+
+}
+
+//create display method
+public void display(){
+  System.out.println("**** Stored data displayed below ****");
+System.out.println("Employee id ="+id);
+  System.out.println("Employee name ="+name);
+  System.out.println("Employee salary ="+salary);
+  System.out.println("Employee id ="+id1);
+  System.out.println("Employee name ="+name1);
+  System.out.println("Employee salary ="+salary1);
+//Print Employee details
+  
+
+}
+
+//Create a Employee constructor with the two employees
+  
+
+//check for loop to print two employee details
+  
+public static void main(String args[]){
+  Scanner s1=new Scanner(System.in);
+  Employee obj=new Employee(s1);
+  obj.getInput();
+
+  obj.display();
+}
+
+}
+=================================================================================================
+Accept an integer number as input from the console and when the program is executed print the binary, octal and hexadecimal equivalent of the given number.
+   Prompt the user for the  values to be input from the terminal
+   Hint: Refer Java Documentation and look for the appropriate Wrapper class method
+
+   Sample Input: 20
+   
+   Expected Output: Binary equivalent: 10100 Octal equivalent: 24 Hexadecimal equivalent: 14
+   
+*/
+import java.util.Scanner;
+public class EquivalentNumbers {
+
+//Main method
+public static void main(String args[]){
+//initialize Convert class constructor
+
+//create Scanner object
+Scanner sc=new Scanner(System.in);
+  int decimal;
+  System.out.println("enter the decimal");
+  decimal=sc.nextInt();
+  String binary,octal,hexadecimal;
+  binary=Integer.toBinaryString(decimal);
+  octal=Integer.toOctalString(decimal);
+  hexadecimal=Integer.toHexString(decimal);
+  System.out.println("Binary equivalent : "+binary+"Octal equivalent:"+octal+"Hexadecimal equivalent :"+hexadecimal);
+}
+}
+=====================================================================================================================================
+Write a program to create a static method named dispCollegeName to print the value of a static variable  college_name initialized using static block.
+   Access this method from another class and display college_name for 3 students who study in same college.
+   Prompt the user for the  values to be input from the terminal
+
+   Sample Input:
+   Enter the student name: Sri
+   Enter the student Roll no: 1
+   Enter the student name: Balaji
+   Enter the student Roll no: 2
+   Enter the student name: Ram
+   Enter the student Roll no: 3
+   
+   Expected Output:
+   Student name: Sri
+   Student Roll no: 1
+   College Name : IIT
+   Student name: Balaji
+   Student Roll no: 2
+   College Name : IIT
+   Student name: Ram
+   Student Roll no: 3
+   College Name : IIT
+
+*/
+import java.util.Scanner;
+public class StaticBlock {
+
+//main method
+public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+//initialize Student class constructor for three times
+Student s1=new Student();
+  Student s2=new Student();
+  Student s3=new Student();
+//Create an array and add the 3 student to it
+Student arr[]={s1,s2,s3};
+//take input from user 3 times using for loop 
+for(int i=0;i<3;i++){
+  System.out.print("enter  name ");
+  arr[i].name=sc.next();
+  System.out.print("enter rollnumumber");
+  arr[i].rollNumber=sc.nextInt();
+}
+  for(int i=0;i<3;i++){
+    System.out.println("student name  "+arr[i].name);
+     System.out.println("rollnumber  "+arr[i].rollNumber);
+    arr[i].dispCollegeName();
+
+    
+  }
+}
+}
+//creating Student class and declaring variables
+class Student{
+  String name;
+  int rollNumber;
+  static String  collegeName;
+  static {
+    collegeName="IIT";
+  }
+  public static void dispCollegeName(){
+    System .out.println("college Name  "+collegeName);
+  }
+}
+
+//creating staticBlock in that give collegename
+
+//add getters and setters
+
+//creating dispCollegename static method 
+     
+
+=======================================================================================================
+Write a program to declare a static variable roll_number inside student class. Create 3 student objects and print their names and roll numbers.
+    Hint: Use increment operator to get different value of roll_number for 3 students.
+
+   
+    Expected Output:
+    Roll no:1  Name: Shree 
+    Roll no:2  Name: Balaji
+    Roll no:3  Name: Ajay
+*/
+
+import java.util.Scanner;
+public class StaticBlock {
+
+//main method
+public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+//initialize Student class constructor for three times
+Student s1=new Student();
+  Student s2=new Student();
+  Student s3=new Student();
+//Create an array and add the 3 student to it
+Student arr[]={s1,s2,s3};
+//take input from user 3 times using for loop 
+for(int i=0;i<3;i++){
+  System.out.print("enter  name ");
+  arr[i].name=sc.next();
+  System.out.print("enter rollnumumber");
+  arr[i].rollNumber=sc.nextInt();
+}
+  for(int i=0;i<3;i++){
+    System.out.println("student name  "+arr[i].name);
+     System.out.println("rollnumber  "+arr[i].rollNumber);
+    arr[i].dispCollegeName();
+
+    
+  }
+}
+}
+//creating Student class and declaring variables
+class Student{
+  String name;
+  int rollNumber;
+  static String  collegeName;
+  static {
+    collegeName="IIT";
+  }
+  public static void dispCollegeName(){
+    System .out.println("college Name  "+collegeName);
+  }
+}
+
+//creating staticBlock in that give collegename
+
+//add getters and setters
+
+//creating dispCollegename static method 
+     
+
+
+
+}
+  
+//add getters and setterss
+class Student{
+  static  int roll_number=0;
+  String name;
+  Student (String name){
+    this.name=name;
+  }
+  void display(){
+    roll_number++;
+    System.out.println("roll_number :"+roll_number+" name : "+name);
+  }
+}
+======================================================================================
+   Write a program to initialize data members of Student class using constructor.
+   Prompt the user for the  values to be input from the terminal
+
+   Sample Input:
+   Enter student name: Shree Balaji
+   Enter student Roll no: 01
+
+   Expected Output:
+   Name: Shree Balaji    Roll no: 01
+
+*/
+
+import java.util.Scanner;
+
+public class StudentConstructor {
+
+//main method
+public static void main(String args[]){
+//initialize Student class using constructor
+//Student s1=new Student(RollNo,name);
+//Get student name and rollno from user and set it to the Student object 
+  Student s1=new Student();
+Scanner sc=new Scanner(System.in);
+  System.out.println("Enter student name: ");
+  String name=sc.nextLine();
+  
+  System.out.println(" Enter student Roll no: ");
+  int RollNo=sc.nextInt();
+  
+  
+  s1.setRollNo(RollNo);
+  s1.setName(name);
+  System.out.print("Name:  "+s1.getName());
+  System.out.print("      ");
+  System.out.println(" Roll no:"+s1.getRollNo());
+  
+  
+//print result
+}
+}
+
+//Create Student class in that declare variables name and roll number 
+class Student{
+   int RollNo;
+   String name;
+  
+//add  setter method for rollno
+public void setRollNo(int RollNo){ 
+         this.RollNo = RollNo; 
+} 
+
+//add getter method for rollno
+public int getRollNo(){ 
+      return RollNo; 
+} 
+  public void setName(String name){ 
+         this.name = name; 
+} 
+
+//add getter method for rollno
+public String getName(){ 
+      return name; 
+} 
+}
+//add setters and getters for name fields also
+==================================================================================
+Create a Student Result Processing System for 3 students.
+   
+   Sample inputs: Console input roll numbers, names and 5 subject marks for each student
+   
+   Sample output: Display roll numbers, names and percentage obtained by all 3 students in the following format:
+   Roll Number: 1
+   Name: Shree Balaji
+   Percentage: 99%
+
+*/
+import java.util.Scanner;
+public class StudentResult {
+
+//main method
+public static void main(String args[]){
+  
+
+//initialize student constructor 3 times with different names
+Student s1=new Student();
+  Student s2=new Student();
+  Student s3=new Student();
+  Scanner sc=new Scanner(System.in);
+  float percentage;
+//Create an array and add the 3 student to it
+Student arr[]={s1,s2,s3};
+  float a[]=new float[3];
+//create displayPercentage static method in that add a for loop for student array
+for(int i=0;i<3;i++){
+  System.out.print("enter rollnumumber");
+  arr[i].rollnumber=sc.nextInt();
+  System.out.print("enter  name ");
+  arr[i].name=sc.next();
+  System.out.print("enter sub1 marks");
+  arr[i].m1=sc.nextInt();
+  System.out.print("enter sub2 marks");
+  arr[i].m2=sc.nextInt();
+  System.out.print("enter sub3 marks");
+  arr[i].m3=sc.nextInt();
+  System.out.print("enter sub4 marks");
+  arr[i].m4=sc.nextInt();
+  System.out.print("enter sub5 marks");
+  arr[i].m5=sc.nextInt();
+ int sum=(arr[i].m1+arr[i].m2+arr[i].m3+arr[i].m4+arr[i].m5);
+  a[i]=sum;
+}
+//calculate percentage
+for(int k=0;k<3;k++){
+  a[k]=(a[k]/500)*100;
+}
+  
+//display student details
+for(int i=0;i<3;i++){ 
+  System.out.println("Student rollnumber :"+arr[i].rollnumber);
+   System.out.println("Student name :"+arr[i].name);
+  System.out.println("Student percentage :"+a[i]);
+
+
+}
+
+//create getStudentInput method in that create a Scanner object and take input from user
+
+//print 5 subject marks using for loop
+     
+}
+}
+
+//create Student class 
+class Student {
+
+//declare and initialize variables
+int rollnumber;
+  String name;
+  int m1;
+  int m2;
+  int m3;
+  int m4;
+  int m5;
+
+  
+  
+//add getters and setters method
+
+}
+====================================================================================
