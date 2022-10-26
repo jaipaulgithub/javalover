@@ -1,0 +1,192 @@
+//JFM1T3_Assignment5:
+/*
+1.Write a program to initialize a boolean variable and print it's opposite value on console.
+
+  Sample Input:true
+
+  Expected Output:false
+
+*/
+public class BooleanOperation {
+
+//Define main method
+  public static void main(String args[]){
+
+//Declare a variable and initialize it as true or false 
+boolean x=true;
+//Print the Result using not operator 
+    System.out.println(!x);
+  }
+}
+=========================================================================
+//JFM1T3_Assignment1: 
+/* Write a program to calculate the circumference of a circle and print the result in whole number. 
+  Allow user to input the cirlce radius from terminal. 
+
+  Sample Input:
+    radius of the circle=6
+
+  Expected Output:
+   Circumference of the circle=38
+   
+
+*/ 
+
+//import statement for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class Circle { 
+
+//Define main method
+  public static void main(String args[]){
+
+//Declare the variables
+int radius;
+
+
+//Use the scanner class to provide radius at execution time
+
+/*
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter radius as a positive integer");
+radius= scanner.nextInt();
+*/
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter radius as a positive integer");
+radius= sc.nextInt();
+//Caluculate the circumference of the circle
+   double area=2*3.14*radius;
+
+//Casting the floating-point value to int  
+float f=(int)area;
+//Print the Result
+  System.out.println("circumferance of the circle"+area);
+  }
+} 
+==========================================================================================
+//JFM1T3_Assignment4:
+/*
+1.Write a program to store your best friend's mobile number in a variable and print the last 4 digits. Consider the following sample for reference.
+  Mobile number should accept only 10 digits. Not less than 10 digits or greater than 10 digits. 
+  Allow user to input the phone number from the terminal
+
+  Sample Input:
+        mobileNum=9393927890
+
+  Expected Output:
+        Your friend's mobile number ends with ******7890
+
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class MobileNumber {
+
+//Define the main method
+public static void main(String args[]){
+//Declare the variable
+int length;
+//Use the scanner class to provide mobileNum at execution time
+
+/*
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter phone number (10 digits)");
+mobileNum = scanner.nextLine();
+*/
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter phone number (10 digits)");
+long mobileNum = scanner.nextLong();
+//Verify if the mobile number is equal to 10 digits or not
+
+//If the mobile number is equal to 10 digits then extract the last 4 digits else print error message
+if((mobileNum+ "").length()==10){
+  //Print the result
+  System.out.println("enter number is**"+(mobileNum%10000));
+}
+  else{
+//System.out.println("Mobile number ends with ******"+variablename);
+  System.out.println("enter 10 digits only");
+  }
+}
+}
+====================================================================================================================
+//JFM1T3_Assignment2:
+/*
+1.Write a program to calculate your percentage assuming total marks given. Print the percentage after rounding it off. 
+  Allow user to input the marks from the terminal. 
+
+  Sample Input:
+        maximum_marks=500
+        total_marks=348
+
+  Expected Output:
+        percentage= 70%
+       
+
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class Percentage {
+
+//Define the main method
+public static void main(String args[]){
+//Declare the variables
+
+//Use the scanner class to provide total_marks and maximum_marks at execution time
+/*
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter the total marks");
+total_marks= scanner.nextInt();
+System.out.println("Enter maximum marks possible "); 
+maximum_marks=scanner.nextInt(); 
+*/
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the total marks");
+int total_marks= sc.nextInt();
+System.out.println("Enter maximum marks possible "); 
+int maximum_marks=sc.nextInt(); 
+
+//Calculate the percentage of marks
+int percentage=maximum_marks*100/total_marks;
+  
+//Print the Result
+  System.out.println("percentage ="+percentage);
+}
+}
+===============================================================================
+//JFM1T3_Assignment3:
+/*
+1.Write a program to declare a character variable and initialize it with any alphabet
+ between A-Z. Print the ASCII value/unicode of the respective character.
+
+  Sample Input:
+       character=M
+
+  Expected Output:
+      ASCII value of M is:77
+
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class Unicode {
+
+//Define main method
+public static void main(String args[]){
+//Use the scanner class to provide character at execution time
+/*Scanner scanner = new Scanner(System.in);  
+char character = scanner.next().charAt(0);  
+int asciiValue = character; 
+*/
+Scanner scanner = new Scanner(System.in);  
+char character = scanner.next().charAt(0);  
+int asciiValue = character; 
+//Print the Result
+  System.out.println("ASCII value of "+character+":"+asciiValue);
+}
+}
+============================================================================================================
