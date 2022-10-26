@@ -1,0 +1,376 @@
+/*  
+
+     Print the results for the following statements considering x = true and y = false
+             1. x&&y
+             2. x||y
+             3. !x
+             4. !y
+     Prompt the user input from the terminal.
+             
+     Sample Input:
+     Enter x as boolean value(true/false): 
+     true
+     Enter y as boolean value(true/false): 
+     false
+     
+     Expected Output:
+     x&&y is: false
+     x||y is: true
+     !x is: false
+     !y is: true
+
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class BooleanOperation {
+
+//main method
+  public static void main(String args[]){
+
+/*Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+    Scanner sc=new Scanner(System.in);
+
+/*Take input from user
+  System.out.println("Enter x as boolean value(true/false): ");
+  boolean x=sc.nextBoolean();
+*/
+    System.out.println("Enter x as boolean value(true/false): ");
+    boolean x=sc.nextBoolean();
+    System.out.println("Enter y as boolean value(true/false): ");
+    boolean y=sc.nextBoolean();
+    //print apppropriate result for boolean operations
+    System.out.println("x&&y is:"+(x && y));
+     System.out.println("x||y is:"+(x ||y));
+     System.out.println("!x is:"+(!x));
+     System.out.println("!y is:"+(!y));
+  }
+}
+====================================================================================
+/*  JFM1T2_AssignmentPrograms2:
+
+    Write a program to perform the below actions and print the result. Check if the below numbers are equal or not.
+    1. 30 and 20
+    2. 20 and 20
+    3. 20 and 30
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first number: 
+    30
+    Enter second number: 
+    20
+    
+    Expected Output:
+    30 and 20 is not equal
+     
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class CheckingEquality {
+
+//main method
+  public static void main(String args[]){
+
+/*Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+     Scanner sc=new Scanner(System.in);
+
+/*Take input from user
+  System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+*/
+    System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+    System.out.println("Enter second number: ");
+  int b=sc.nextInt();
+
+//check if the two numbers are equal or not
+    if(a==b){
+      System.out.println(a+"and"+b +"is equal");
+    }
+    else{
+       System.out.println(a+"and"+b +"is not equal");
+    }
+
+//If the two numbers are equal then print both are equal else print both are not equal
+  }
+}
+============================================================================================================================
+/*  JFM1T2_Assignment7:
+
+     Assume that the integer variable a is 20 and b is 10. Evaluate the following expressions and print the value of resultant variable:
+     1. int b= a-- - --a;
+     2. int c=a--;
+     3. int d=a>>2;
+     4. int e=a&b;
+     Prompt the user input from the terminal.
+     
+     Sample Input:
+     Enter a value: 
+     20
+     Enter b value: 
+     10
+     
+     Expected Output:
+     a-- - --a is: 2
+     a-- is: 18
+     a>>2 is: 4
+     a&b is: 0
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class Expression {
+
+//main method
+  public static void main(String args[]){
+
+/*Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+     Scanner sc=new Scanner(System.in);
+    
+
+/*Take input from user
+  System.out.println("Enter a value: ");
+  int a=sc.nextInt();
+*/
+System.out.println("Enter a value: ");
+  int a=sc.nextInt();
+    System.out.println("Enter b value: ");
+  int b=sc.nextInt();
+//print appropriate result for Expression operators
+System.out.println("a-- - --a is:"+(a-- - --a ));
+    System.out.println("a-- is:"+(a-- ));
+    System.out.println("a>>2 is:"+(a>>2 ));
+    System.out.println(" a&b is:"+( a&b ));
+  }
+}
+=========================================================================================
+/*  JFM1T2_Assignment1:
+
+     Write a program to perform the below actions and print the result.
+     1. Difference of 2 numbers (30 and 10)
+     2. Product of 2 numbers (45 and 2)
+     3. Division of 2 numbers (600 and 10)
+     4. Increment and Decrement the number (15)
+     5. Remainder of 2 numbers (14 and 5)
+     Prompt the user input from the terminal.
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class Operations {
+
+//main method
+  public static void main(String args[]){
+
+/*
+  Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+    Scanner sc=new Scanner(System.in);
+
+/*
+  Take input from user
+  System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+*/
+   
+    System.out.println("enter a value");
+    int a=sc.nextInt();
+     System.out.println("enter b value");
+    int b=sc.nextInt();
+     System.out.println("enter c value");
+    int c=sc.nextInt();
+     System.out.println("enter d value");
+    int d=sc.nextInt();
+     System.out.println("enter e value");
+    int e=sc.nextInt();
+     System.out.println("enter f value");
+    int f=sc.nextInt();
+     System.out.println("enter g value");
+    int g=sc.nextInt();
+     System.out.println("enter h value");
+    int h=sc.nextInt();
+     System.out.println("enter i value");
+    int i=sc.nextInt();
+
+//calculate difference,product,division,increment and remainder 
+    System.out.println(a-b);
+     System.out.println(c*d);
+     System.out.println(e/f);
+     System.out.println(g++);
+     System.out.println(h%i);
+    
+
+//print appropriate result for all operations
+  }
+}
+=============================================================================================
+/*  JFM1T2_Assignment4:
+
+    Perform the following operations where a = 10 and b =20 using shorthand assignment operators and print the value of a in console for each expression.
+     1. a*= b
+     2. a-= b
+     3. a/= b
+     4. a%= b
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first value: 
+    10
+    Enter second value: 
+    20
+    
+    Expected Output:
+    a*=b is: 200
+    a-=b is: 180
+    a/=b is: 9
+    a%=b is: 9
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class ShortHandOperators {
+
+//main method
+public static void main(String args[]){
+/*
+  Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+  Scanner sc=new Scanner(System.in);
+
+/*
+  Take input from user
+  System.out.println("Enter first value: ");
+  int a=sc.nextInt();
+*/
+  System.out.println("Enter first value: ");
+  int a=sc.nextInt();
+  System.out.println("Enter second value: ");
+  int b=sc.nextInt();
+
+//print appropriate result for assignment operators
+   System.out.println("a*=b is:"+(a*=b ));
+  System.out.println("a-=b is:"+(a-=b ));
+  System.out.println(" a/=b is:"+( a/=b ));
+  System.out.println("a%=b is:"+(a%=b ));
+}
+}
+=================================================================================================================
+/*  JFM1T2_Assignment5:
+
+    Write a program to print the sum of two numbers without using + operator.
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first number: 
+    22
+    Enter second number: 
+    50
+    
+    Expected Output:
+    The sum of two numbers is: 72
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class SumWithoutPlus {
+
+//main method
+  public static void main(String args[]){
+
+/*
+  Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+     Scanner sc=new Scanner(System.in);
+
+/*
+  Take input from user
+  System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+*/
+    System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+    System.out.println("Enter second number: ");
+  int b=sc.nextInt();
+
+//check if the second number is greater than zero then increase first number and decrease second number
+
+//check if the second number is less than zero then decrease first number and increase second number
+    for(int i=0;i<b;i++){
+      a++;
+      
+    }
+    System.out.println("the sum of two numbers is "+a);
+
+//print result
+  }
+}
+=============================================================================================================================
+/*  JFM1T2_Assignment6:
+
+    Write a program that swaps the values of 2 variables without using third variable.
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first number: 
+    12
+    Enter second number: 
+    45
+    
+    Expected Output:
+    Before swapping: 12 , 45
+    After swapping: 45 , 12
+*/
+
+//import statements for java program to read inputs using Scanner class
+import java.util.Scanner;
+
+public class Swapping {
+
+//main method
+  public static void main(String args[]){
+
+/*
+  Use the scanner class to provide input at execution time using scanner object
+  Scanner sc=new Scanner(System.in);
+*/
+     Scanner sc=new Scanner(System.in);
+
+/*
+  Take input from user
+  System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+*/
+    System.out.println("Enter first number: ");
+  int a=sc.nextInt();
+    System.out.println("Enter second number: ");
+  int b=sc.nextInt();
+    System.out.print("before swaping"+a);
+    System.out.println(","+b);
+
+//swapping two numbers without using third variable
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    System.out.print("after swaping"+a);
+ System.out.println(","+b);
+//print result
+  }
+}
+=====================================================================================================================================================
