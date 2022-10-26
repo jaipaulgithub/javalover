@@ -1,0 +1,213 @@
+Write a program to print the following pattern:
+       a
+     a b a
+   a b c b a
+     a b a
+       a
+*/
+
+public class DiamondPattern {
+
+//Add main method here
+  public static void main(String [] args){
+
+for(int i=0;i<=4;i++){
+  for(int j=0;j<=4;j++){
+    if(i==2 || j==2 || (i+j)%2==0 && j%2!=0){
+      if(i==2 && j==2){
+        System.out.print("c"+" ");
+      }
+        else if((i+j)%2!=0){
+          System.out.print("b"+" ");
+        }
+      
+      else{
+    System.out.print("a"+" ");
+      }
+    }
+    else{
+      System.out.print(" "+" ");
+    }
+  }
+     System.out.println(" ");
+}
+ 
+}
+}
+========================================================================
+ Write a program to display the name of the day, based on the number, using the switch statement.
+  Prompt the user to input a number between 1 and 7. 
+  
+  Sample Input: 1
+  
+  Expected Output: Monday
+  
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class DisplayDay {
+  public static void main(String args[]){
+//Use the scanner class to provide input at execution time using scanner object
+//Scanner s= new Scanner(System.in);
+Scanner s= new Scanner(System.in);
+  System.out.println("Enter value for displaying day:");
+int number=s.nextInt();
+
+/*
+Take input of the number for displaying day
+System.out.println("Enter value for displaying day:");
+number=sc.nextInt();
+*/
+
+//Declare switch case and check the input value to print the day entered by the user
+    switch(number){
+      case 1:
+         System.out.println("monday");
+        break;
+        case 2:
+         System.out.println("thesday");
+        break;
+        case 3:
+         System.out.println("wednessday");
+        break;
+        case 4:
+         System.out.println("thusday");
+        break;
+        case 5:
+         System.out.println("friday");
+        break;
+        case 6:
+         System.out.println("saturday");
+        break;
+        case 7:
+         System.out.println("sunday");
+        break;
+      default:
+        System.out.println("invalid input");
+    }
+  }     
+}
+=======================================================================
+Write a program to find the highest among the given 3 numbers.
+   Prompt the user for the 3 numbers to be input from the terminal.
+
+   SampleInput: 
+   Enter the first number: 11
+   Enter the second number: 22
+   Enter the third number: 1
+
+   Expected Output:
+   22 is highest number
+ 	
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class HighestNumber {
+     
+//Add main method
+  public static void main(String args[]){
+
+//Declare the three variables
+
+//Use the scanner class to provide input at execution time
+/* 
+
+ Scanner s= new Scanner(System.in);
+ System.out.println("Enter the first number");
+ number1=s.nextInt();
+ 
+*/
+    Scanner s= new Scanner(System.in);
+ System.out.println("Enter the first number");
+int number1=s.nextInt();
+int number2=s.nextInt();
+int number3=s.nextInt();
+
+//check which number is highest using if else condition
+if(number1>number2&&number1>number3){ 
+  System.out.println(number1+"higest number");
+}
+    else if(number2>number3&&number2>number1){
+      System.out.println(number2+"higest number");
+    }
+    else{
+      System.out.println(number3+"higest number");
+    }
+  } 
+}
+======================================================================
+Write a program to print the following pattern:
+     1 
+     01 
+     101 
+     0101 
+     10101 
+*/
+
+public class Pattern {
+     
+//Add main method here
+public static void main(String args[]){
+//If i and j are equal check (i+j)%2==0 or not if zero then print one else print zero
+for(int i=0;i<=4;i++){
+  for(int j=0;j<=i;j++){
+    if((i+j)%2==0){
+      System.out.print("1");
+    }
+    else{
+      System.out.print("0");
+    }
+  }
+   System.out.println();
+}
+ 
+}
+}
+===============================================================================
+ Write a program to print all the prime numbers between 2 numbers.
+   Prompt the user to enter the 2 numbers.
+   
+   Sample Input:
+   Enter starting Number: 20
+   Enter ending Number: 30
+
+   Expected Output:
+   Prime numbers between 20 and 30 are : 
+   23
+   29
+
+*/
+
+//import statements for java program to read inputs using Scanner class 
+import java.util.Scanner;
+
+public class PrimeNumbers {
+
+//Add main method here
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int i,j;
+    System.out.println("enter first number");
+    int a=sc.nextInt();
+    System.out.println("enter first number");
+    int b=sc.nextInt();
+    System.out.println("prime numbers between"+a+"and"+b+"are :");
+    for( i=a;i<=b;i++){
+      for( j=2;j<=i;j++){
+        if(i%j==0)
+          break;
+      }
+      if(i==j)
+         System.out.println(j);
+    }
+      
+    
+    
+  }
+
+  }
+==============================================================================
