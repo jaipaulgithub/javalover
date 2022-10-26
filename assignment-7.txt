@@ -1,0 +1,178 @@
+ Write a program to convert an int variable to String using an inbuilt function of String class and print the char at index position 2.
+    Prompt the user input from the terminal.
+    
+    Sample input: 54321
+    
+    Expected output: char at index position 2 = 3
+*/
+
+import java.util.Scanner;
+
+public class IntToString {
+
+//main method
+  public static void main(String args[]){
+
+//declare int type variable
+Scanner sc=new Scanner(System.in);
+    System.out.println("enter srting1");
+    String st1=sc.nextLine();
+    String st2="";
+     System.out.println("enter n value");
+       int n=sc.nextInt();
+    int result=Integer.valueOf(st1);
+   // System.out.println(result);
+     for (int i=0; i<=st1.length()-1; i++)
+       { 
+        
+            if(i==n) { 
+              
+                System.out.println(" char at index position  "+i+"= "+st1.charAt(i));               
+              
+            }
+            } 
+  }
+}
+===============================================================================================
+Write a program to check whether a string is a Palindrome.
+    Prompt the user input from the terminal.
+    
+    Sample input: Malayalam
+    
+    Expected output: Malayalam is a Palindrome
+*/
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+//main method
+public static void main(String args[]){
+//take input from user
+Scanner sc=new Scanner(System.in);
+  System.out.println("Enter a string");
+  String str=sc.nextLine();
+  String str2="";
+for(int i=str.length()-1;i>=0;i--){
+  str2=str2+str.charAt(i);
+}
+  System.out.println("reverse of string is"+str2);
+  if(str2.equals(str)){
+    System.out.println(str+"is palindrome");
+  }
+  else{
+    System.out.println(str+" is not palindrome");
+  }
+}
+}
+=====================================================================
+ Write a program to reverse a string using StringBuffer. Reverse entire sentence in string and also reverse each word in the string. 
+    Prompt the user input from the terminal.
+    
+    Sample input: Learning made easy at bitLabs
+    
+    Expected output:
+    reversing entire string: sbaLtib ta ysae edam gninraeL
+    reversing each word at its place: gninraeL edam ysae ta sbaLtib  
+*/
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+//main method
+public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Enter a string");
+  String str=sc.nextLine();
+  String [] arr=str.split(" ");
+  String str2="";
+  String str3="";
+for(int i=str.length()-1;i>=0;i--){
+  str2=str2+str.charAt(i);
+}
+  System.out.println("reverse of string is :"+str2);
+for(String x:arr){
+  
+   String reverseword="";
+  for(int i=x.length()-1;i>=0;i--){
+    reverseword=reverseword+x.charAt(i);
+  }
+  str3=str3+reverseword+" ";
+}
+ System.out.println("reverse each word at its place :"+str3);
+}
+}
+===========================================================================================
+Write a program to find a substring in a string using an inbuilt method of String class.
+    Prompt the user input from the terminal.
+  
+    Sample input: Learning made easy at bitLabs
+    Enter search string : bitLabs
+  
+    Expected output: bitLabs is found
+  
+    Enter search string: bitlab
+    Expected output: bitlab is not found
+*/
+
+import java.util.Scanner;
+
+public class SubStringWithInbuilt {
+public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter a string");
+  String str=sc.nextLine();
+  System.out.println("Enter search string :");
+  String ch=sc.nextLine();
+  if(str.contains(ch)){
+    System.out.println(ch+"is found");
+  }
+  else{
+     System.out.println(ch+"is not found");
+  }
+}
+
+}
+=================================================================================
+ Write a program to find a substring in a string without using an inbuilt method of String class.
+    Prompt the user input from the terminal.
+    
+    Sample input: Learning made easy at bitLabs
+    Enter search string: bitLabs
+    
+    Expected output: bitLabs is found
+    
+    Enter search string: bitlab
+    Expected output: bitlab is not found
+
+*/
+
+import java.util.Scanner;
+
+public class SubStringWithoutInbuilt {
+
+//main method
+public static void main(String args[]){
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter a string");
+  String str=sc.nextLine();
+  System.out.println("Enter search string :");
+  String ch=sc.nextLine();
+ String [] arr=str.split(" ");
+  int count=0;
+//compare two strings if the search string found or not without using inbuilt method isSubString()
+  for(String x:arr){
+    if(x.equals(ch)){
+  count=1;
+    }
+  }
+  if(count==1){
+     System.out.println(ch+" is found");
+  }
+  else{
+     System.out.println(ch+" is not found");
+  }
+}
+}
+===================================================================================================================
