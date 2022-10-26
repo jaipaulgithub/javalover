@@ -1,0 +1,96 @@
+//leap year or not;
+import java.util.Scanner;
+public class Leap{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter year");
+    int year=sc.nextInt();
+    System.out.println(year);
+    if(year%400==0)
+    {
+    System.out.println(year+"a leap year");
+    }
+    else if(year%4==0&&year%100!=0)
+      {
+    System.out.println(year+"a leap year");
+      }
+    
+    else
+    {
+    System.out.println(year+"not a leap year");
+    }
+    }
+}
+=================================================================
+//product the numbers;
+import java.util.Scanner;
+public class Products{
+  public static void main(String args[]){
+    Scanner z=new Scanner(System.in);
+    System.out.println("enter a number");
+    int x=z.nextInt();
+    int sum=1;
+    int rem=0;
+    while(x!=0){
+      rem=x%10;
+      sum=sum*rem;
+      x=x/10;
+    }
+    System.out.println(sum);
+  } 
+}
+===========================================
+// given number positive or negitive;
+import java.util.Scanner;
+public class positiveornegitive{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter value to chuck positive or negitive");
+    int a=sc.nextInt();
+    System.out.println(a);
+   if(a>0){
+     System.out.println(a+"positive");
+   }
+    else 
+      System.out.println(a+"negitive");
+    
+    
+  }
+}
+===============================================================
+//sum of productnumbers;
+import java.util.Scanner;
+public class Sumofproduct{
+  public static void main(String args[]){
+  Scanner z=new Scanner(System.in);
+  System.out.println("enter a value");
+int x=z.nextInt();
+    int sum=0;
+    int rem=0;
+    while(x!=0){
+      rem=x%10;
+      sum=sum+rem;
+      x=x/10;
+    }
+    System.out.println(sum);
+ }
+}
+===========================================================================
+// reverse numbers;
+import java.util.Scanner;
+public class Reverse{
+  public static void main(String args[]){
+    Scanner z=new Scanner(System.in);
+    System.out.println("enter number");
+    int x=z.nextInt();
+    int sum=0;
+    int rem=0;
+    while(x!=0){
+      rem=x%10;
+      sum=sum*10+rem;
+      x=x/10;
+    }
+    System.out.println(sum);
+  }
+}
+===============================================================
